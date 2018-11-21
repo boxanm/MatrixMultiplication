@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/PJCSemestralWork.dir/main.cpp.o CMakeFiles/PJCSemestralWork.dir/matrix.cpp.o  -o PJCSemestralWork 
