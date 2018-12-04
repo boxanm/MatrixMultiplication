@@ -674,3 +674,19 @@ make[1]: Leaving directory '/home/matt/Documents/cpp/PJCSemestralWork/cmake-buil
     Feature record: CXX_FEATURE:0cxx_variable_templates
     Feature record: CXX_FEATURE:0cxx_variadic_macros
     Feature record: CXX_FEATURE:0cxx_variadic_templates
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/matt/Documents/cpp/PJCSemestralWork/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_94b15/fast"
+make[1]: Entering directory '/home/matt/Documents/cpp/PJCSemestralWork/cmake-build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_94b15.dir/build.make CMakeFiles/cmTC_94b15.dir/build
+make[2]: Entering directory '/home/matt/Documents/cpp/PJCSemestralWork/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_94b15.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_94b15.dir/CheckIncludeFile.c.o   -c /home/matt/Documents/cpp/PJCSemestralWork/cmake-build-debug/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_94b15
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_94b15.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_94b15.dir/CheckIncludeFile.c.o  -o cmTC_94b15 
+make[2]: Leaving directory '/home/matt/Documents/cpp/PJCSemestralWork/cmake-build-debug/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/matt/Documents/cpp/PJCSemestralWork/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
