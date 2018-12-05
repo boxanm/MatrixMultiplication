@@ -13,13 +13,12 @@ Matrix::Matrix(const Matrix &matrix){
     m_rows = matrix.m_rows;
     m_cols = matrix.m_cols;
 
-    m_data = new int*[m_rows];
+    m_data = new int*[m_rows*m_cols];
 //    std::cout<<"copy contructor"<<std::endl;
 
     for (int i = 0; i < m_rows; ++i){
-        m_data[i] = new int[m_cols];
         for (int j = 0; j < m_cols; ++j) {
-            m_data[i][j] = matrix.m_data[i][j];
+            m_data[i*m_rows + j] = matrix.m_data[i*m_rows + j];
         }
     }
 }

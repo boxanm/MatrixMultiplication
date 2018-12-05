@@ -10,11 +10,11 @@
 
 typedef int MATRIX_VALUE_TYPE;
 
-class Matrix{
+class Matrix1D{
 private:
     unsigned int m_rows;
     unsigned int m_cols;
-    MATRIX_VALUE_TYPE** m_data;
+    MATRIX_VALUE_TYPE* m_data;
     unsigned int m_strategy = 0;
 public:
     Matrix(unsigned int width, unsigned int height);
