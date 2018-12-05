@@ -84,10 +84,10 @@ void printPerformance(double time,unsigned int strategy){
             cout<<"Naive algorithm needed: " << time <<" ms to finish"<<endl;
             break;
         case 1:
-            cout<<"Parallel  thread Divide&conquer algorithm needed: " << time <<" ms to finish"<<endl;
+            cout<<"Single thread Divide&conquer algorithm needed: " << time <<" ms to finish"<<endl;
             break;
         case 2:
-            cout<<"Single     Divide&conquer algorithm needed: " << time <<" ms to finish"<<endl;
+            cout<<"Parallel      Divide&conquer algorithm needed: " << time <<" ms to finish"<<endl;
             break;
         default:
             break;
@@ -146,22 +146,12 @@ void runTests(const unsigned int &rounds, const unsigned int &lowPow, const unsi
     double counterParallel = 0;
     while(power <= upperPow){
         for (int i = 0; i < rounds; ++i) {
-            if(oneDimension){
-                Matrix1D e(power);
-                Matrix1D f(power);
-                e.fillWithRandomData();
-                f.fillWithRandomData();
-                counterSingleThread += runPerformanceTest(e,f,1);
-                counterParallel += runPerformanceTest(e,f,2);
-            }
-            else{
-                Matrix e(power);
-                Matrix f(power);
-                e.fillWithRandomData();
-                f.fillWithRandomData();
-                counterSingleThread += runPerformanceTest(e,f,1);
-                counterParallel += runPerformanceTest(e,f,2);
-            }
+            Matrix1D e(power);
+            Matrix1D f(power);
+            e.fillWithRandomData();
+            f.fillWithRandomData();
+            counterSingleThread += runPerformanceTest(e,f,1);
+            counterParallel += runPerformanceTest(e,f,2);
         }
         meanSingleThread = counterSingleThread/rounds;
         meanParallel = counterParallel/rounds;
@@ -306,7 +296,7 @@ int menu(int argc, char **argv) {
     switch (argc) {
         case 0:
         case 1:
-            cout << "No argument parsed, exiting" << endl;
+            cout << "No argument parsed, for help run with argument -h or -H or --help " << endl;
             return 0;
         case 2: {
             std::string argv1 = argv[1];

@@ -303,9 +303,6 @@ Matrix1D divideAndConquerThreads(const Matrix1D &matrix1, const Matrix1D &matrix
 }
 
 Matrix1D naiveMultiplication(const Matrix1D &matrix1, const Matrix1D &matrix2){
-//    if (matrix1.m_cols=matrix2.m_rows or matrix1.m_cols!=matrix2.m_cols)//TODO podminky pro ruzne velikosti matic
-//        //exception
-//    {}
     Matrix1D newMatrix1D(matrix1.m_cols,matrix2.m_rows);
 
     for (int i = 0; i < matrix1.m_rows; ++i) {

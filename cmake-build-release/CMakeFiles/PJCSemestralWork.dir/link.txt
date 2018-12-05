@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/PJCSemestralWork.dir/main.cpp.o CMakeFiles/PJCSemestralWork.dir/matrix.cpp.o CMakeFiles/PJCSemestralWork.dir/matrix1D.cpp.o CMakeFiles/PJCSemestralWork.dir/menu.cpp.o  -o PJCSemestralWork -pthread 
