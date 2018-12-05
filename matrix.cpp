@@ -2,10 +2,6 @@
 // Created by matt on 11/13/18.
 //
 #define INTERVAL_RANDOM_NUMBER 10;
-
-#include <random>
-#include <thread>
-#include <future>
 #include "matrix.hpp"
 
 //copy constructor

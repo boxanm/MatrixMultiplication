@@ -5,6 +5,9 @@
 #ifndef PJCSEMESTRALWORK_MATRIX1D_H
 #define PJCSEMESTRALWORK_MATRIX1D_H
 
+#include <random>
+#include <thread>
+#include <future>
 #include <iostream>
 #include <vector>
 

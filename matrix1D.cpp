@@ -14,7 +14,6 @@ Matrix1D::Matrix1D(const Matrix1D &matrix){
     m_cols = matrix.m_cols;
 
     m_data = new int[m_rows*m_cols];
-//    std::cout<<"copy contructor"<<std::endl;
 
     for (int i = 0; i < m_rows; ++i){
         for (int j = 0; j < m_cols; ++j) {

@@ -204,6 +204,33 @@ matrix1D.cpp.s:
 	$(MAKE) -f CMakeFiles/PJCSemestralWork.dir/build.make CMakeFiles/PJCSemestralWork.dir/matrix1D.cpp.s
 .PHONY : matrix1D.cpp.s
 
+menu.o: menu.cpp.o
+
+.PHONY : menu.o
+
+# target to build an object file
+menu.cpp.o:
+	$(MAKE) -f CMakeFiles/PJCSemestralWork.dir/build.make CMakeFiles/PJCSemestralWork.dir/menu.cpp.o
+.PHONY : menu.cpp.o
+
+menu.i: menu.cpp.i
+
+.PHONY : menu.i
+
+# target to preprocess a source file
+menu.cpp.i:
+	$(MAKE) -f CMakeFiles/PJCSemestralWork.dir/build.make CMakeFiles/PJCSemestralWork.dir/menu.cpp.i
+.PHONY : menu.cpp.i
+
+menu.s: menu.cpp.s
+
+.PHONY : menu.s
+
+# target to generate assembly for a file
+menu.cpp.s:
+	$(MAKE) -f CMakeFiles/PJCSemestralWork.dir/build.make CMakeFiles/PJCSemestralWork.dir/menu.cpp.s
+.PHONY : menu.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -222,6 +249,9 @@ help:
 	@echo "... matrix1D.o"
 	@echo "... matrix1D.i"
 	@echo "... matrix1D.s"
+	@echo "... menu.o"
+	@echo "... menu.i"
+	@echo "... menu.s"
 .PHONY : help
 
 
