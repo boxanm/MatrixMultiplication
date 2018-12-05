@@ -6,23 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/home/matt/Documents/cpp/PJCSemestralWork/main.cpp
-iostream
--
-chrono
--
-fstream
--
-exception
--
-stdexcept
+/home/matt/Documents/cpp/PJCSemestralWork/matrix1D.cpp
+random
 -
 thread
 -
-matrix.hpp
-/home/matt/Documents/cpp/PJCSemestralWork/matrix.hpp
+future
+-
+matrix1D.hpp
+/home/matt/Documents/cpp/PJCSemestralWork/matrix1D.hpp
 
-/home/matt/Documents/cpp/PJCSemestralWork/matrix.hpp
+/home/matt/Documents/cpp/PJCSemestralWork/matrix1D.hpp
 iostream
 -
 vector

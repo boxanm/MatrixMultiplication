@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/PJCSemestralWork.dir/main.cpp.o"
   "CMakeFiles/PJCSemestralWork.dir/matrix.cpp.o"
+  "CMakeFiles/PJCSemestralWork.dir/matrix1D.cpp.o"
   "PJCSemestralWork.pdb"
   "PJCSemestralWork"
 )

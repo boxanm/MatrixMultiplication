@@ -91,6 +91,12 @@
 		<Unit filename="/home/matt/Documents/cpp/PJCSemestralWork/matrix.hpp">
 			<Option target="PJCSemestralWork"/>
 		</Unit>
+		<Unit filename="/home/matt/Documents/cpp/PJCSemestralWork/matrix1D.cpp">
+			<Option target="PJCSemestralWork"/>
+		</Unit>
+		<Unit filename="/home/matt/Documents/cpp/PJCSemestralWork/matrix1D.hpp">
+			<Option target="PJCSemestralWork"/>
+		</Unit>
 		<Unit filename="/home/matt/Documents/cpp/PJCSemestralWork/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

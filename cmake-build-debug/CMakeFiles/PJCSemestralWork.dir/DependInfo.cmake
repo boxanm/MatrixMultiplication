@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/matt/Documents/cpp/PJCSemestralWork/main.cpp" "/home/matt/Documents/cpp/PJCSemestralWork/cmake-build-debug/CMakeFiles/PJCSemestralWork.dir/main.cpp.o"
   "/home/matt/Documents/cpp/PJCSemestralWork/matrix.cpp" "/home/matt/Documents/cpp/PJCSemestralWork/cmake-build-debug/CMakeFiles/PJCSemestralWork.dir/matrix.cpp.o"
+  "/home/matt/Documents/cpp/PJCSemestralWork/matrix1D.cpp" "/home/matt/Documents/cpp/PJCSemestralWork/cmake-build-debug/CMakeFiles/PJCSemestralWork.dir/matrix1D.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -3,7 +3,11 @@
 
 CMakeFiles/PJCSemestralWork.dir/main.cpp.o: ../main.cpp
 CMakeFiles/PJCSemestralWork.dir/main.cpp.o: ../matrix.hpp
+CMakeFiles/PJCSemestralWork.dir/main.cpp.o: ../matrix1D.hpp
 
 CMakeFiles/PJCSemestralWork.dir/matrix.cpp.o: ../matrix.cpp
 CMakeFiles/PJCSemestralWork.dir/matrix.cpp.o: ../matrix.hpp
+
+CMakeFiles/PJCSemestralWork.dir/matrix1D.cpp.o: ../matrix1D.cpp
+CMakeFiles/PJCSemestralWork.dir/matrix1D.cpp.o: ../matrix1D.hpp
 

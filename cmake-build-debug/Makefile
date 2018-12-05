@@ -177,6 +177,33 @@ matrix.cpp.s:
 	$(MAKE) -f CMakeFiles/PJCSemestralWork.dir/build.make CMakeFiles/PJCSemestralWork.dir/matrix.cpp.s
 .PHONY : matrix.cpp.s
 
+matrix1D.o: matrix1D.cpp.o
+
+.PHONY : matrix1D.o
+
+# target to build an object file
+matrix1D.cpp.o:
+	$(MAKE) -f CMakeFiles/PJCSemestralWork.dir/build.make CMakeFiles/PJCSemestralWork.dir/matrix1D.cpp.o
+.PHONY : matrix1D.cpp.o
+
+matrix1D.i: matrix1D.cpp.i
+
+.PHONY : matrix1D.i
+
+# target to preprocess a source file
+matrix1D.cpp.i:
+	$(MAKE) -f CMakeFiles/PJCSemestralWork.dir/build.make CMakeFiles/PJCSemestralWork.dir/matrix1D.cpp.i
+.PHONY : matrix1D.cpp.i
+
+matrix1D.s: matrix1D.cpp.s
+
+.PHONY : matrix1D.s
+
+# target to generate assembly for a file
+matrix1D.cpp.s:
+	$(MAKE) -f CMakeFiles/PJCSemestralWork.dir/build.make CMakeFiles/PJCSemestralWork.dir/matrix1D.cpp.s
+.PHONY : matrix1D.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -192,6 +219,9 @@ help:
 	@echo "... matrix.o"
 	@echo "... matrix.i"
 	@echo "... matrix.s"
+	@echo "... matrix1D.o"
+	@echo "... matrix1D.i"
+	@echo "... matrix1D.s"
 .PHONY : help
 
 

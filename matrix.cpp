@@ -4,9 +4,9 @@
 #define INTERVAL_RANDOM_NUMBER 10;
 
 #include <random>
-#include "matrix.hpp"
 #include <thread>
 #include <future>
+#include "matrix.hpp"
 
 //copy constructor
 Matrix::Matrix(const Matrix &matrix){
