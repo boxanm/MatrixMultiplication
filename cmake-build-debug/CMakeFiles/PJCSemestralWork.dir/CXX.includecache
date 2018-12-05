@@ -6,13 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/matt/Documents/cpp/PJCSemestralWork/main.cpp
+/home/matt/Documents/cpp/PJCSemestralWork/matrix.cpp
 matrix.hpp
 /home/matt/Documents/cpp/PJCSemestralWork/matrix.hpp
-matrix1D.hpp
-/home/matt/Documents/cpp/PJCSemestralWork/matrix1D.hpp
-menu.hpp
-/home/matt/Documents/cpp/PJCSemestralWork/menu.hpp
 
 /home/matt/Documents/cpp/PJCSemestralWork/matrix.hpp
 random
@@ -26,6 +22,16 @@ iostream
 vector
 -
 
+/home/matt/Documents/cpp/PJCSemestralWork/matrix1D.cpp
+random
+-
+thread
+-
+future
+-
+matrix1D.hpp
+/home/matt/Documents/cpp/PJCSemestralWork/matrix1D.hpp
+
 /home/matt/Documents/cpp/PJCSemestralWork/matrix1D.hpp
 random
 -
@@ -36,17 +42,5 @@ future
 iostream
 -
 vector
--
-
-/home/matt/Documents/cpp/PJCSemestralWork/menu.hpp
-matrix.hpp
-/home/matt/Documents/cpp/PJCSemestralWork/matrix.hpp
-matrix1D.hpp
-/home/matt/Documents/cpp/PJCSemestralWork/matrix1D.hpp
-iostream
--
-chrono
--
-fstream
 -
 

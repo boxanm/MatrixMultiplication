@@ -23,8 +23,8 @@ void runComparison(Matrix1D matrix1, Matrix1D matrix2);
 void saveMatrices(const Matrix &matrix1, const Matrix &matrix2, const std::string &filename);
 void runTests(const unsigned int &rounds, const unsigned int &lowPow, const unsigned int &upperPow, const std::string &filename, bool oneDimension);
 int menu(int argc, char **argv);
-int menuFile(char **argv, const int &impementation);
-int menuRandom(char **argv,  const int &impementation);
+int menuFile(char **argv, const int &implementation);
+int menuRandom(char **argv,  const int &implementation);
 int menuTest(char **argv);
 
 #endif //PJCSEMESTRALWORK_MENU_H

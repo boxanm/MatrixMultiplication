@@ -298,8 +298,7 @@ int menuTest(char **argv){
         return 0;
     }
     std::string filename = argv[5];
-    runTests(rounds,lowPow,upperPow,filename,true);
-//    runTests((unsigned int) rounds,(unsigned int) lowPow,(unsigned int) upperPow,filename,true);
+    runTests((unsigned ) rounds,(unsigned ) lowPow,(unsigned ) upperPow,filename,true);
     return 1;
 }
 

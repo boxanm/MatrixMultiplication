@@ -251,45 +251,74 @@ Matrix divideAndConquerThreads(const Matrix &matrix1, const Matrix &matrix2, con
         return C;
     }
     else{
-        if(parallel){
+        if(parallel && std::thread::hardware_concurrency()!=1){
             std::vector<Matrix> matricesA;
             matrix1.divideMatrixIntoQuarters(matricesA);
             std::vector<Matrix> matricesB;
             matrix2.divideMatrixIntoQuarters(matricesB);
+            switch (std::thread::hardware_concurrency()){
+                case 2:{
+                    auto t1 = std::async(std::launch::async, divideAndConquer,matricesA[0],matricesB[0]);
+                    auto t2 = std::async(std::launch::async, divideAndConquer,matricesA[1],matricesB[2]);
+                    Matrix c11 = t1.get() + t2.get();
+                    t1 = std::async(std::launch::async, divideAndConquer,matricesA[0],matricesB[1]);
+                    t2 = std::async(std::launch::async, divideAndConquer,matricesA[1],matricesB[3]);
+                    Matrix c12 = t1.get() + t2.get();
+                    t1 = std::async(std::launch::async, divideAndConquer,matricesA[2],matricesB[0]);
+                    t2 = std::async(std::launch::async, divideAndConquer,matricesA[3],matricesB[2]);
+                    Matrix c21 = t1.get() + t2.get();
+                    t1 = std::async(std::launch::async, divideAndConquer,matricesA[2],matricesB[1]);
+                    t2 = std::async(std::launch::async, divideAndConquer,matricesA[3],matricesB[3]);
+                    Matrix c22 = t1.get() + t2.get();
 
-            auto t1 = std::async(std::launch::async, divideAndConquer,matricesA[0],matricesB[0]);
-            auto t2 = std::async(std::launch::async, divideAndConquer,matricesA[1],matricesB[2]);
-            auto t3 = std::async(std::launch::async, divideAndConquer,matricesA[0],matricesB[1]);
-            auto t4 = std::async(std::launch::async, divideAndConquer,matricesA[1],matricesB[3]);
-            auto t5 = std::async(std::launch::async, divideAndConquer,matricesA[2],matricesB[0]);
-            auto t6 = std::async(std::launch::async, divideAndConquer,matricesA[3],matricesB[2]);
-            auto t7 = std::async(std::launch::async, divideAndConquer,matricesA[2],matricesB[1]);
-            auto t8 = std::async(std::launch::async, divideAndConquer,matricesA[3],matricesB[3]);
+                    Matrix C(c11,c12,c21,c22);
+                    return C;
 
-            Matrix c11 = t1.get() + t2.get();
-            Matrix c12 = t3.get() + t4.get();
-            Matrix c21 = t5.get() + t6.get();
-            Matrix c22 = t7.get() + t8.get();
+                }
+                case 3:
+                case 4:
+                case 5:
+                case 6:
+                case 7:{
+                    auto t1 = std::async(std::launch::async, divideAndConquer,matricesA[0],matricesB[0]);
+                    auto t2 = std::async(std::launch::async, divideAndConquer,matricesA[1],matricesB[2]);
+                    auto t3 = std::async(std::launch::async, divideAndConquer,matricesA[0],matricesB[1]);
+                    auto t4 = std::async(std::launch::async, divideAndConquer,matricesA[1],matricesB[3]);
+                    Matrix c11 = t1.get() + t2.get();
+                    Matrix c12 = t3.get() + t4.get();
+                    t1 = std::async(std::launch::async, divideAndConquer,matricesA[2],matricesB[0]);
+                    t2 = std::async(std::launch::async, divideAndConquer,matricesA[3],matricesB[2]);
+                    t3 = std::async(std::launch::async, divideAndConquer,matricesA[2],matricesB[1]);
+                    t4 = std::async(std::launch::async, divideAndConquer,matricesA[3],matricesB[3]);
+                    Matrix c21 = t1.get() + t2.get();
+                    Matrix c22 = t3.get() + t4.get();
 
-            Matrix C(c11,c12,c21,c22);
-            return C;
+                    Matrix C(c11,c12,c21,c22);
+                    return C;
 
+                }
+                default:{
+                    auto t1 = std::async(std::launch::async, divideAndConquer,matricesA[0],matricesB[0]);
+                    auto t2 = std::async(std::launch::async, divideAndConquer,matricesA[1],matricesB[2]);
+                    auto t3 = std::async(std::launch::async, divideAndConquer,matricesA[0],matricesB[1]);
+                    auto t4 = std::async(std::launch::async, divideAndConquer,matricesA[1],matricesB[3]);
+                    auto t5 = std::async(std::launch::async, divideAndConquer,matricesA[2],matricesB[0]);
+                    auto t6 = std::async(std::launch::async, divideAndConquer,matricesA[3],matricesB[2]);
+                    auto t7 = std::async(std::launch::async, divideAndConquer,matricesA[2],matricesB[1]);
+                    auto t8 = std::async(std::launch::async, divideAndConquer,matricesA[3],matricesB[3]);
+                    Matrix c11 = t1.get() + t2.get();
+                    Matrix c12 = t3.get() + t4.get();
+                    Matrix c21 = t5.get() + t6.get();
+                    Matrix c22 = t7.get() + t8.get();
+
+                    Matrix C(c11,c12,c21,c22);
+                    return C;
+                }
+            }
         }
 
         else{
-            std::vector<Matrix> matricesA;
-            matrix1.divideMatrixIntoQuarters(matricesA);
-            std::vector<Matrix> matricesB;
-            matrix2.divideMatrixIntoQuarters(matricesB);
-
-            Matrix c11 = divideAndConquer(matricesA[0],matricesB[0])+divideAndConquer(matricesA[1],matricesB[2]);
-            Matrix c12 = divideAndConquer(matricesA[0],matricesB[1])+divideAndConquer(matricesA[1],matricesB[3]);
-            Matrix c21 = divideAndConquer(matricesA[2],matricesB[0])+divideAndConquer(matricesA[3],matricesB[2]);
-            Matrix c22 = divideAndConquer(matricesA[2],matricesB[1])+divideAndConquer(matricesA[3],matricesB[3]);
-
-            Matrix C(c11,c12,c21,c22);
-            return C;
-
+            return divideAndConquer(matrix1,matrix2);
         }
     }
 }
