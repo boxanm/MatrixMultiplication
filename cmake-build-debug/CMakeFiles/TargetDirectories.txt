@@ -1,3 +1,0 @@
-/home/matt/Documents/cpp/PJCSemestralWork/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/matt/Documents/cpp/PJCSemestralWork/cmake-build-debug/CMakeFiles/PJCSemestralWork.dir
-/home/matt/Documents/cpp/PJCSemestralWork/cmake-build-debug/CMakeFiles/edit_cache.dir
